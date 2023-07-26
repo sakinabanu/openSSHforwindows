@@ -6,6 +6,9 @@ ssh username@targetIPaddress
  
 ssh-keygen -t ed25519 -C"githubemail"
 
+It will run but ask password which will only be with user.
+
+It will run but ask password which will only be with user.
 To connect ssh without password (using keys):
 1. Give your ssh public key to other user( never take or give private key)
 2. Then they will save your key in authurise_keys 
