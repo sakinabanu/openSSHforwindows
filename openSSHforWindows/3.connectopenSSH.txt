@@ -1,0 +1,13 @@
+CONNECT OPENSSH ON WINDOWS:
+
+Once installed, you can connect to OpenSSH Server from a Windows or Windows Server device with the OpenSSH client installed. From a PowerShell prompt, run the following command:
+
+ssh username@targetIPaddress
+ 
+ssh-keygen -t ed25519 -C"githubemail"
+
+To connect ssh without password (using keys):
+1. Give your ssh public key to other user( never take or give private key)
+2. Then they will save your key in authurise_keys 
+3. This will give you permission to access others accounts.
+4. When work completed the key to be removed from authorization as long access can help in hacking .

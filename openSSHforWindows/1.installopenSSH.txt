@@ -1,0 +1,36 @@
+
+INSTALL OPENSSH FOR WINDOWS:
+
+Open PowerShell
+Go to crome and open this: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell
+Check whether SSH clients and server are available or not by copying the link and paste it in powershell terminal : (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator) 
+To install OpenSSH using PowerShell, run PowerShell as an Administrator. 
+To make sure that OpenSSH is available, run the following cmdlet:
+copy and paste the below link in PS terminal to check cient & server components are present or not: 
+
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+The command should return the following output if neither are already installed:
+
+It gives the Output as:
+
+	Name  : OpenSSH.Client~~~~0.0.1.0
+	State : NotPresent
+
+	Name  : OpenSSH.Server~~~~0.0.1.0
+	State : NotPresent
+
+Then, install the server or client components which ever is not present using below link:
+
+
+# Install the OpenSSH Client
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+# Install the OpenSSH Server
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Both commands should return the following output:
+
+After completion it gives the Output as:
+	Copy
+	Path          :
+	Online        : True
+	RestartNeeded : False
