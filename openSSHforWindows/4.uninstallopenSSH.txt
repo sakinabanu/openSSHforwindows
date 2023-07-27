@@ -1,6 +1,5 @@
 UNINSTALL OPENSSH FROM WINDOWS:
 
-
 To uninstall the OpenSSH components using PowerShell, use the following commands:
 
 # Uninstall the OpenSSH Client
